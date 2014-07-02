@@ -1,0 +1,22 @@
+{
+  "manifest_version": 2,
+
+  "name": "Pardus Helper",
+  "description": "",
+  "version": "0.1.0",
+
+  "content_scripts": [
+    {
+      "matches": ["*://*.pardus.at/building_trade.php*"],
+      "js": ["building.js"],
+      "run_at": "document_end",
+      "all_frames": true
+    },
+    {
+      "matches": ["*://*.pardus.at/sendmsg.php*"],
+      "js": ["jquery.min.js", "sendmsg.js"],
+      "run_at": "document_end",
+      "all_frames":true
+    }
+  ]
+}
